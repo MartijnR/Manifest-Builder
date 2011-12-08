@@ -6,7 +6,7 @@ https://github.com/MartijnR/Manifest-Builder
 
 Description:
 
-This class dynamically creates a manifest file that contains a list of the resources for the browser's Application Cache. Using an Application Cache will speed up loading times and make the application available offline. Both HTML5 and Gears (though this is deprecated) manifest formats are supported. The manifest will automatically generate a unique 'version number' when any of the resources have changed to inform the browser to update the Application Cache.
+This class dynamically creates a manifest file that contains a list of the resources for the browser's Application Cache. Using an Application Cache will speed up loading times and make the application available offline. Both HTML5 and Gears (deprecated) manifest formats are supported. The manifest will automatically generate a new 'version number' when any of the resources have changed to inform the browser to update the Application Cache.
 
 The builder is implemented as a fat controller to keep things simple (and I can't think of a situation where you'd have more than 1 manifest in an application). 
 
