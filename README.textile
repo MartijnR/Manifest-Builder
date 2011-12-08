@@ -13,7 +13,7 @@ The builder is implemented as a fat controller to keep things simple (and I can'
 
 h2. How to use
 
-When using the Code Igniter's PHP framework, this controller can simply be copied into the application/controllers folder. To test go to: yourdomain.com/manifest/html5 (or yourdomain.com/manifest/gears). If it works add the manifest url to your html.  If another framework is used you'll have to tweak/port the code (become a collaborator and post it here!).
+When using the Code Igniter's PHP framework, this controller can simply be copied into the application/controllers folder. To test go to: yourdomain.com/manifest/html5 (or yourdomain.com/manifest/gears). If it works add the manifest url to your html.  If another framework is used you'll have to tweak/port the code (please create a fork).
 
 The commented block right after the class declaration allows customization of the manifest and includes:
 
