@@ -19,7 +19,7 @@ The commented block right after the class declaration allows customization of th
 
 * a *forced version number update* ($hash_manual_override) in case this is necessary (e.g. when edits in server code do not necessarily change the generated client resources and thus do not change the hash (version))
 
-* adding additional *cache resources* ($pages), such as any pages in addition to the default file (index.php e.g.) which is already included ('')
+* adding additional *cache resources* ($pages), such as any pages in addition to the main page (index.php e.g.) which is already included ('')
 
 * the *fallback* page to load when an app is offline and gets a request for a page that does not exist in the Application Cache ($offline)
 
