@@ -6,14 +6,14 @@ https://github.com/MartijnR/Manifest-Builder
 
 Description:
 
-This class dynamically creates a manifest file for your web application. The manifest contains the resources that need to be stored in the browser's Application Cache. Using an Application Cache will speed up loading times and make the application available offline. Both HTML5 and Gears (though this is deprecated) are supported. The manifest will automatically generate a unique 'version number' when any of the resources have changed to inform the browser to update the Application Cache.
+This class dynamically creates a manifest file that contains a list of the resources for the browser's Application Cache. Using an Application Cache will speed up loading times and make the application available offline. Both HTML5 and Gears (though this is deprecated) manifest formats are supported. The manifest will automatically generate a unique 'version number' when any of the resources have changed to inform the browser to update the Application Cache.
 
 The builder is implemented as a fat controller to keep things simple (and I can't think of a situation where you'd have more than 1 manifest in an application). 
 
 
 How to use:
 
-If using Code Igniter's excellent PHP framework, this controller can simply be copied into the application/controllers folder. To test go to: yourdomain.com/manifest/html5 (or yourdomain.com/manifest/gears). If it works add the manifest url to your html.  If another PHP framework is used you'll have to tweak the code (become a collaborator and post your port here!).
+If using Code Igniter's (excellent) PHP framework, this controller can simply be copied into the application/controllers folder. To test go to: yourdomain.com/manifest/html5 (or yourdomain.com/manifest/gears). If it works add the manifest url to your html.  If another PHP framework is used you'll have to tweak the code (become a collaborator and post your port here!).
 
 The commented block right after the class declaration allows customization of the manifest and includes:
 
@@ -26,7 +26,7 @@ The commented block right after the class declaration allows customization of th
 - any resources that should never be cached ($network)
 
 
-I am just starting to code, so ANY SUGGESTIONS to improve the code are very welcome!
+I am just starting to code and this is my first open source contribution. ANY SUGGESTIONS to improve the code are very welcome!
 
 
 
