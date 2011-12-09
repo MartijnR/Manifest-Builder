@@ -4,27 +4,33 @@ h4. by: Martijn van de Rijdt ("Aid Web Solutions":http://www.aidwebsolutions.com
 "github":https://github.com/MartijnR/Manifest-Builder
 
 
-h2. Description:
+h2. Description
 
-This class dynamically creates a manifest file that contains a list of the resources for the browser's Application Cache. Using an Application Cache will speed up loading times and make the application available offline. Both HTML5 and Gears (deprecated) manifest formats are supported. The manifest will automatically generate a new 'version number' when any of the resources have changed to inform the browser to update the Application Cache.
-
+This class dynamically creates a manifest file that contains a list of the resources for the browser's Application Cache. Using an Application Cache will speed up loading times and make the application available offline. Both HTML5 and Gears (deprecated) manifest formats are supported. 
 The builder is implemented as a fat controller to keep things simple (and I can't think of a situation where you'd have more than 1 manifest in an application). 
+
+
+h2. Features
+
+The following features are included:
+* automatically detect all resources in <link> and <img> tags in html and add these to the manifest
+* automatically detect all images files in the linked css stylesheets files and add these to the manifest
+* automatic version number update when the manifest resources have changed (so client browser is prompted to re-download the resources)
+* ability to manually update the version number (for troubleshooting and when edits may not result in changes in the dynamically created resources)
+* ability to manually add additional pages to include, a fallback resource and resources that should never be cached
 
 
 h2. How to use
 
-When using the Code Igniter's PHP framework, this controller can simply be copied into the application/controllers folder. To test go to: yourdomain.com/manifest/html5 (or yourdomain.com/manifest/gears). If it works add the manifest url to your html.  If another framework is used you'll have to tweak/port the code (please create a fork).
+When using the Code Igniter's PHP framework, the controller manifest.php can simply be copied into the application/controllers folder and the two views in the application/views folder. To test go to: yourdomain.com/manifest/html5 (or yourdomain.com/manifest/gears). If it works add the manifest url to your html.  If another framework is used you'll have to tweak/port the code (please create a fork, or become a collaborator of this project).
 
 The commented block right after the class declaration allows customization of the manifest and includes:
 
-* a *forced version number update* ($hash_manual_override) in case this is necessary (e.g. when edits in server code do not necessarily change the generated client resources and thus do not change the hash (version))
-
+* a *forced version number update* ($hash_manual_override) in case this is necessary 
 * adding additional *cache resources* ($pages), such as any pages in addition to the main page (index.php e.g.) which is already included ('')
-
 * the *fallback* page to load when an app is offline and gets a request for a page that does not exist in the Application Cache ($offline)
-
 * any resources that should *never* be cached ($network)
 
 h2. Feedback
 
-_I am just starting to code and this is my first open source contribution. ANY SUGGESTIONS to improve the code are very welcome!_
+I am just starting to code and this is my first open source contribution. *ANY SUGGESTIONS* to improve the code are *VERY* welcome!
