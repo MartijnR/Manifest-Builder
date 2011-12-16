@@ -1,4 +1,4 @@
-h1. Manifest Builder (for Code Igniter)
+h1. Manifest Builder (for Code Igniter) 1.0
 
 h4. by: Martijn van de Rijdt ("Aid Web Solutions":http://www.aidwebsolutions.com)
 "github":https://github.com/MartijnR/Manifest-Builder

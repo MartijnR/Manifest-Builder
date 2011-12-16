@@ -3,6 +3,7 @@
  * Manifest Class
  *
  * @package	Manifest Builder
+ * @version	1.0 (16 December 2011)
  * @author	Martijn van de Rijdt
  * @link	https://github.com/MartijnR/Manifest-Builder
  */
@@ -202,8 +203,8 @@ class Manifest extends CI_Controller {
 		return $url_array;
 	}
 	
-	//returns a full url if relative url was provided
-	//if the relative url is not relative to the webroot, an alternative base can be provided
+	// returns a full url if relative url was provided
+	// if the relative url is not relative to the webroot, an alternative base can be provided
 	private function _full_url($url, $base=NULL)
 	{
 		if(!isset($base))
@@ -218,10 +219,10 @@ class Manifest extends CI_Controller {
 		return $url;
 	}
 	
-	//returns a relative url if a full url was provided
+	// returns a relative url if a full url was provided
 	private function _rel_url($url)
 	{
-		//in case full urls were used, remove the base_url:
+		// in case full urls were used, remove the base_url:
 		if (strpos($url, base_url())==0)
 		{
 			$url = substr_replace($url, '', 0, strlen(base_url()));
