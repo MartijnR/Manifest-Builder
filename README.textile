@@ -13,7 +13,7 @@ The builder is implemented as a fat controller to keep things simple (and I can'
 h2. Features
 
 The following features are included:
-* automatically detect all resources in <link> and <img> tags in html and add these to the manifest
+* automatically detect all resources in _link_ and _img_ tags in html and add these to the manifest
 * automatically detect all images files in the linked css stylesheets files and add these to the manifest
 * automatic version number update when the manifest resources have changed (so client browser is prompted to re-download the resources)
 * ability to manually update the version number (for troubleshooting and when edits may not result in changes in the dynamically created resources)
