@@ -65,7 +65,6 @@ class Manifest extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper(array('url', 'json'));
-		$this->load->model('Survey_model','',TRUE);
 		$this->_set_data();
 		log_message('debug', 'array with manifest resources generated');
 	}
@@ -100,28 +99,17 @@ class Manifest extends CI_Controller {
 	}
 	
 	private function _set_data(){
-		//check if the survey exists (from subdomain) and is live
-		if ($this->Survey_model->is_live_survey()){
-			//convert to full urls
-			$this->pages = $this->_full_url_arr($this->pages);
-			$this->data['hashes'] = '';
-			$this->data['cache'] = array();	
-			foreach ($this->pages as $page)
-			{
-				$this->_add_resources_to_cache($page);				
-			}
-			$this->data['hashes'] = md5($this->data['hashes']).'_'.$this->hash_manual_override; //hash of hashes		
-			$this->data['network'] = $this->_full_url_arr($this->network);
-			$this->data['fallback']= $this->_full_url($this->offline);	
-		}
-		// else return an empty manifest that can be used to remotely clear the client's applicationCache
-		else
+		//convert to full urls
+		$this->pages = $this->_full_url_arr($this->pages);
+		$this->data['hashes'] = '';
+		$this->data['cache'] = array();	
+		foreach ($this->pages as $page)
 		{
-			$this->data['hashes'] = time(); //timestamp forces update of applicationCache
-			$this->data['cache'] = array();
-			$this->data['network'] = array();
-			$this->data['fallback'] = '';
+		    $this->_add_resources_to_cache($page);				
 		}
+		$this->data['hashes'] = md5($this->data['hashes']).'_'.$this->hash_manual_override; //hash of hashes		
+		$this->data['network'] = $this->_full_url_arr($this->network);
+		$this->data['fallback']= $this->_full_url($this->offline);	
 	}
 	
 	// function to add all direct and direct resources from html page to cache

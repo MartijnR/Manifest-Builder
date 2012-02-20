@@ -22,7 +22,7 @@ The following features are included:
 
 h2. How to use
 
-When using the Code Igniter's PHP framework, the controller manifest.php can simply be copied into the application/controllers folder and the two views in the application/views folder. To test go to: yourdomain.com/manifest/html5 (or yourdomain.com/manifest/gears). If it works add the manifest url to your html.  If another framework is used you'll have to tweak/port the code (please create a fork, or become a collaborator of this project).
+When using the Code Igniter's PHP framework, the controller manifest.php can simply be copied into the application/controllers folder and the two views in the application/views folder. To test go to: yourdomain.com/manifest/html5 (or yourdomain.com/manifest/gears). If it works add the manifest url to your html tag(s).  If another framework is used you'll have to tweak/port the code (please create a fork, or become a collaborator of this project).
 
 The commented block right after the class declaration allows customization of the manifest and includes:
 
