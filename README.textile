@@ -33,4 +33,4 @@ The commented block right after the class declaration allows customization of th
 
 h2. Feedback
 
-Feedback welcome ("here": https://github.com/MartijnR/Manifest-Builder/issues)
+Feedback welcome "here":https://github.com/MartijnR/Manifest-Builder/issues
